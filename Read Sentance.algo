@@ -1,0 +1,16 @@
+ALGORITHM Read_Sentence
+VAR
+    c :CHAR;
+    voy,nbrC,space,word: INTEGER:=0;  
+BEGIN
+  REPEAT
+    read(c)
+    nbrC:=nbrC+1;
+  SWITCH (c) DO
+    case " " : space:= space+1; 
+    case ["a","e","o","i","u"] : voy=voy+1;
+    default : 
+  END_SWITCH
+  UNTIL (c:=".")
+  word:=space+1;
+END
